@@ -1,0 +1,8 @@
+name: Flex
+markdown: redcarpet
+pygments: true
+baseurl: /mysite
+usename: 龚写于
+highlighter: pygments
+mardown: redcarpet
+port: 5000

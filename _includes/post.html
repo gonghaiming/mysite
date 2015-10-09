@@ -1,0 +1,50 @@
+<div class="content" id="home">
+  <div id="sidebar-button">
+    <img src="{{ site.baseurl }}/images/sidebar-button.png">
+  </div>
+  <div id="post-info">
+    <div id="cover-photo-container">
+      <img id="cover-photo" src="{{ site.baseurl }}/images/{{ page.cover }}" width="850" height="350">
+    </div>
+    <div id="info-container">
+      <div id = "title">
+      <span>{{ page.title }}</span>
+    </div>
+      <h3>&nbsp;</h3>
+      <span id="date">{{ page.date | date_to_string }}</a>
+    </div>
+  </div>
+
+  <div class="post">
+    {{ content }}
+  </div>
+  <p>{{ site.usename }}{{page.date| date_to_string }} </p>
+  <div class="ds-thread" data-thread-key="{{page.id}}" data-title="{{page.title}}" data-url="{{site.url}}"></div>
+  <div class="colophon">
+    <p>
+      <span id="pub-date">Published on {{ page.date | date_to_string }}</span> <span class="separator">&bull;</span>
+      <span id="social">Find me on <a href="">Twitter</a>!</span>
+    </p>
+  </div>
+
+  <!-- 多说评论框 start -->
+  <div class="ds-thread" data-thread-key="{{page.id}}" data-title="page.title" data-url="page.url"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"gonghaiming"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+
+
+
+  
+
+</div>
